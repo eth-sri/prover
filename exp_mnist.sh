@@ -1,0 +1,8 @@
+python test_mnist.py --nframes=4 --nhidden=32 --nlayers=2 --eps=0.007 --bound_method="lp" --seed=1000 --model_dir="saved/mnist_04f_032h_2l.pt"
+python test_mnist.py --nframes=4 --nhidden=32 --nlayers=2 --eps=0.010 --bound_method="lp" --seed=1000 --model_dir="saved/mnist_04f_032h_2l.pt"
+python test_mnist.py --nframes=4 --nhidden=32 --nlayers=2 --eps=0.013 --bound_method="lp" --seed=1000 --model_dir="saved/mnist_04f_032h_2l.pt"
+python test_mnist.py --nframes=4 --nhidden=32 --nlayers=2 --eps=0.016 --bound_method="lp" --seed=1000 --model_dir="saved/mnist_04f_032h_2l.pt"
+python test_mnist.py --nframes=4 --nhidden=32 --nlayers=2 --eps=0.007 --bound_method="opt" --seed=1000 --model_dir="saved/mnist_04f_032h_2l.pt"
+python test_mnist.py --nframes=4 --nhidden=32 --nlayers=2 --eps=0.010 --bound_method="opt" --seed=1000 --model_dir="saved/mnist_04f_032h_2l.pt"
+python test_mnist.py --nframes=4 --nhidden=32 --nlayers=2 --eps=0.013 --bound_method="opt" --seed=1000 --model_dir="saved/mnist_04f_032h_2l.pt"
+python test_mnist.py --nframes=4 --nhidden=32 --nlayers=2 --eps=0.016 --bound_method="opt" --seed=1000 --model_dir="saved/mnist_04f_032h_2l.pt"
