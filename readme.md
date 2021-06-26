@@ -1,26 +1,18 @@
-# PROVER Artifact
+;# PROVER - Scalable Polyhedral Verification of Recurrent Neural Networks
 
-This markdown document explains how to reproduce the results of the CAV 2021 paper #187, "Scalable Polyhedral Verification of Recurrent Neural Networks". All the artifact-related resources are located at `/home/cav2021-paper187/artifact/` and the directories appearing in this document are all relative path from it. 
+This repository contains the source codes and demonstrative scripts for the CAV2021 accepted paper, "Scalable Polyhedral Verification of Recurrent Neural Networks". It is available to download the artefact (an Ubuntu virtual machine ready to run) on [Zenodo](https://zenodo.org/record/4742650#.YNc0KxMzZpQ) as well.
+
 
 ## Preparation
 
-### Machine Credential
-
-* ID: cav2021-paper187
-* PW: 2021-187-prover
-
-
 ### System Requirement
 
-* This virtual machine is running Ubuntu 18.04.5 LTS (x86_64). Recommended resource allocations are: 4GB of memory, and 20GB of disk space. 
 * Running the experiments on GPU is highly recommended. Estimated running times reported here are based on the setting with a single Tesla V100.
-* Also, since the framework relies on the [Gurobi optimiser](https://www.gurobi.com/) version 9.1, if you are testing PROVER for academic purpose, you can follow the Gurobi's insturction of academic licence [here](https://www.gurobi.com/academia/academic-program-and-licenses/). Make sure to activate the Gurobi license for version 9.1 within this virtual machine or anywhere you are testing on. Note that the machine should be connected to internet in advance to activate Gurobi license.
-* [Conda](https://docs.conda.io/en/latest/) environment is recommended to easily install the dependencies. This virtual machine already includes the miniconda, so there will be no problem to follow the setup instruction below. However, please prepare Conda if you use PROVER outside here.
-
+* The framework relies on the [Gurobi optimiser](https://www.gurobi.com/) version 9.1, if you are testing PROVER for academic purpose, you can follow the Gurobi's insturction of academic licence [here](https://www.gurobi.com/academia/academic-program-and-licenses/). Make sure to activate the Gurobi license for version 9.1 before you run the experiments.
+* [Conda](https://docs.conda.io/en/latest/) environment is recommended to easily install the dependencies. 
+  
 
 ### Virtual Environment Setup
-
-Here is the setup guidelines to use PROVER. To use PROVER portably, you only need the files in this folder, and Conda installed environment. 
 
 `requirements.txt` is the frozen conda list of the environment. You can setup the necessary virtual environment by:
 ```
@@ -111,11 +103,6 @@ You can verify either the existing model or the newly trained model. Please refe
 * `gsc.pt`: the model used for GSC classification.
 * `hapt_(l)L_(h)H.pt`: HAPT classifier with l LSTM layers with h hidden dimension.
 * `mnist_(f)F_(h)H_(l)L.pt`: MNIST classifier with l LSTM layers with h hidden dimension. MNIST demonstration is with fixed number of frames f.
-
-
-### Notice about the experiment running time
-
-You can refer the average running time per example for each experiment on fig.6b, 6d, 8b, 9b, and table 1 from the paper. Running full experiments on speech classification takes approximately 80 hours, 10 hours for image classification, and 20 hours for motion sensor data classification on GPU available environment, so we provide both the full experiment scripts and the subset of the scripts for demonstrative purpose in reasonable time.
 
 
 ### 7.1 Speech classification
@@ -335,13 +322,3 @@ class SpeechClassifierDP():
 ```
 
 We recommend you to adjust hyperparameters on the existing models and edit the test code.
-
-
-
-## Caveats
-
-* The verification runs usually slower on the virtual machine than on the host processor. Especially without the GPU, the slowdown of PROVER's opt option is observed significantly.
-
-* We do not include the comparison with POPQORN experiments for following reasons:
-    1. The codebase of the latest POPQORN only depends on PyTorch 1.1 and not compatible with the later versions.
-    2. The single run of the comparison takes too much time (please refer the paper about the exact running time) so we decided to include only the lighter demonstrations.
