@@ -1,4 +1,4 @@
-;# PROVER - Scalable Polyhedral Verification of Recurrent Neural Networks
+# PROVER - Scalable Polyhedral Verification of Recurrent Neural Networks
 
 This repository contains the source codes and demonstrative scripts for the CAV2021 accepted paper, "Scalable Polyhedral Verification of Recurrent Neural Networks". It is available to download the artefact (an Ubuntu virtual machine ready to run) on [Zenodo](https://zenodo.org/record/4742650#.YNc0KxMzZpQ) as well.
 
