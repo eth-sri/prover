@@ -322,3 +322,33 @@ class SpeechClassifierDP():
 ```
 
 We recommend you to adjust hyperparameters on the existing models and edit the test code.
+
+
+## Citing this work
+
+```
+@inproceedings{ryou2021scalable,
+  title={Scalable Polyhedral Verification of Recurrent Neural Networks},
+  author={Ryou, Wonryong and Chen, Jiayu and Balunovic, Mislav and Singh, Gagandeep and Dan, Andrei and Vechev, Martin},
+  booktitle={Computer Aided Verification},
+  volume={12759},
+  year={2021},
+  organization={Springer}
+}
+```
+
+
+## Contributors
+
+* [Wonryong Ryou](https://wryou.xyz/) - [wryou@ethz.ch](mailto:wryou@ethz.ch) 
+* [Jiayu Chen]() - [jiayuchen233@gmail.com](mailto:jiayuchen233@gmail.com) 
+* [Mislav Balunović](https://www.sri.inf.ethz.ch/people/mislav) - [mislav.balunovic@inf.ethz.ch](mailto:mislav.balunovic@inf.ethz.ch)
+* [Gagandeep Singh](https://ggndpsngh.github.io/) - [gagandeepsi@vmware.com](mailto:gagandeepsi@vmware.com)
+* [Andrei Dan](https://andreidan.net/) - [andrei-marian.dan@hitachi-powergrids.com](mailto:andrei-marian.dan@hitachi-powergrids.com)
+* [Martin Vechev](https://www.sri.inf.ethz.ch/people/martin) - [martin.vechev@inf.ethz.ch](mailto:martin.vechev@inf.ethz.ch)
+
+
+## Licence and Copyright
+
+* Copyright (c) 2021 [Secure, Reliable, and Intelligent Systems Lab (SRI), ETH Zurich](https://www.sri.inf.ethz.ch/)
+* Licensed under the [Apache Licence](http://www.apache.org/licenses/)
